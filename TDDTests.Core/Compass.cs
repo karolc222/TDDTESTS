@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,7 +21,11 @@ namespace TDDTests.Core
 
         public Point Rotate(Point point, Direction direction)
         {
-            return Point.South;
+            if (point == Point.North && direction == Direction.Right)
+            {
+                return Point.East;
+            }
+            return point;
         }
     }
 }

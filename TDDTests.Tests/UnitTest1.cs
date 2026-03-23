@@ -23,5 +23,7 @@ namespace TDDTests.Tests
             //Assert
             Assert.That(result, Is.EqualTo(Point.East));
         }
+
+
     }
 }
